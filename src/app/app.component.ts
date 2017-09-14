@@ -1,24 +1,47 @@
 import { Component } from '@angular/core';
-import { Hero } from './components/hero/hero';
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+} from '@angular/animations';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger("routerAnimation", [
+     transition("* <=> *", [
+     query(":enter", [
+        style({
+           position:  "fixed",
+           width:"100%",
+           transform: "translateX(100%)"
+        }),
+        animate("0.5s linear", style({transform: "translateX(0%)"})),
+
+     ], {optional: true}),
+     query(":leave", [
+        style({
+           position:  "fixed",
+           width:"100%",
+           transform: "translateX(0%)",
+           opacity:"0.3"
+        }),
+        animate("0.5s linear", style({transform: "translateX(-100%)"})),
+
+        ], {optional: true})
+     ])
+  ])
+]
 })
 export class AppComponent {
-  title = 'fasfasfa';
-  heroes = HEROES;
-  selectedHero: Hero;
+  title = 'My Angular 2 app works!';
+  // change the animation state
+   getRouteAnimation(outlet) {
+     return outlet.activatedRouteData.animation
+   }
 }

@@ -1,19 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './components/hero/hero-detail.component';
+import { MenuComponent } from './menu.component';
+import { HeaderComponent } from './header.component';
+import { LoginComponent } from './login/login.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CurrencyComponent } from './currency/currency.component';
+import { MovieComponent } from './movie/movie.component';
+import { CONST_ROUTING } from './app.routing';
+import { SharedService } from "./shared.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent
-
+    MenuComponent,
+    WeatherComponent,
+    CurrencyComponent,
+    MovieComponent,
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+    CONST_ROUTING
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

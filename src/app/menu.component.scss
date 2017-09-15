@@ -1,8 +1,16 @@
-.left-menu{
+.left-menu {
   text-align: center;
   height: 100vh;
-background-color: white;
-  .main-logo{
-    margin:25.5px auto;
+  background-color: white;
+  .main-logo {
+    margin: 25.5px auto;
+  }
+  ul.nav{
+    li{
+      a{
+        padding:19.2px 0;
+      }
+    }
   }
 }
+

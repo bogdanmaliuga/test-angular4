@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu.component';
 import { HeaderComponent } from './header.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
@@ -21,7 +22,8 @@ import { SharedService } from "./shared.service";
     CurrencyComponent,
     MovieComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

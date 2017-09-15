@@ -1,0 +1,30 @@
+@import "../variables.scss";
+.home-page{
+    ul.nav{
+        width: 34%;
+        max-width: 630px;
+        li{
+            @include transition(all .3s linear);
+            border-bottom: 1px solid #979797;
+            a{
+                @include transition(all .3s linear);
+                color: #9b9b9b;
+                font-size: 18px;
+                letter-spacing: -0.18px;
+                padding: 17.5px 0px;
+                i.fa{
+                    padding-right: 18px;
+                }
+            }
+            &:hover{
+                @include transition(all .3s linear);
+                cursor: pointer;
+                border-color:$primary-color;
+                a{
+                    @include transition(all .3s linear);
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+}

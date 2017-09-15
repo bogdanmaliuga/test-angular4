@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall":   "export NPM_CONFIG_PRODUCTION=false;npm install -g @angular/cli@1.4.1",
-    "postinstall":  "export NPM_CONFIG_PRODUCTION=true;ng build --prod"
+    "preinstall":"",
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {

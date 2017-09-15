@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start":"npm server.js",
+    "start": "npm server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall":"",
+    "preinstall": "",
     "postinstall": "ng build"
   },
   "private": true,
@@ -27,6 +27,7 @@
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.4.1",
     "express": "^4.15.4",
+    "font-awesome": "^4.7.0",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

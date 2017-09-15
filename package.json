@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build",
-    "preinstall":   "npm install -g http-server",
+    "preinstall":   "npm install -g @angular/cli@1.4.1",
     "postinstall":  "ng build --prod"
   },
   "private": true,

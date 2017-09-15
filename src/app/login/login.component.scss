@@ -1,22 +1,77 @@
-.login-form{
-
+@import "../variables.scss";
+.login-form {
   width: 400px;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 111px;
   text-align: center;
   .fade-line {
     height: 1px;
-    margin:23px 0;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%,#979797));
-}
-  h3{
+    margin: 23px 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #979797));
+  }
+  h3 {
     color: #4a4a4a;
     font-size: 20px;
     font-weight: 300;
     line-height: 28px;
   }
-  .form-control{
+  .form-control {
     border: 1px solid #e9eff4;
-background-color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 0;
+  }
+  .form-check{
+    text-align: left;
+    font-size: 13px;
+    line-height: 27px;
+    /* Text style for "Remember M" */
+    letter-spacing: -0.16px;
+  }
+  button.login{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 66px;
+    height: 66px;
+    border-radius: 132px;
+    font-size: 18px;
+    font-weight: 300;
+    /* Text style for "Login" */
+    letter-spacing: -0.43px;
+    &:disabled{
+      background-color: #9b9b9b;
+      color:white;
+      border-color:#9b9b9b;
+      &:hover{
+        cursor: default;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  a.signup{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 68px;
+    width: 205px;
+    line-height: 43px;
+    
+    border: 2px solid #979797;
+    background-color: transparent;
+    color: #9b9b9b;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    /* Text style for "SIGN UP" */
+    letter-spacing: 8px;
+    @include transition(all .3s linear);
+    &:hover{
+      @include transition(all .3s linear);
+      cursor: pointer;
+      background-color:#979797;
+      color:white; 
+    }
   }
 }
+

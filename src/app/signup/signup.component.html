@@ -1,0 +1,24 @@
+<div class="signup-form">
+    <h3>Validation</h3>
+    <div class="fade-line"></div>
+    <small>Please enter your email and  6 digit security code your admin sent to your email</small>
+    <form #myForm="ngForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <input type="email" [(ngModel)]="email" email name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+        </div>
+        <h3>Enter Code</h3>
+        <div class="form-group group-code">
+            <input name="password1" [(ngModel)]="password.num1" autofocus='' maxlength='1' placeholder='*' type='password' required>
+            <input name="password2" [(ngModel)]="password.num2" maxlength='1' placeholder='*' type='password' required>
+            <input name="password3" [(ngModel)]="password.num3" maxlength='1' placeholder='*' type='password' required>
+            <input name="password4" [(ngModel)]="password.num4" maxlength='1' placeholder='*' type='password' required>
+            <input name="password5" [(ngModel)]="password.num5" maxlength='1' placeholder='*' type='password' required>
+            <input name="password6" [(ngModel)]="password.num6" maxlength='1' placeholder='*' type='password' required>
+        </div>
+        <div class="fade-line"></div>
+        
+        <button [disabled]="!myForm.form.valid" type="submit" class="btn btn-primary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        <div class="fade-line"></div>
+    </form>
+    <small>Already hanve an account? <a [routerLink]="['/login']">Login</a></small>
+</div>

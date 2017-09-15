@@ -8,6 +8,7 @@ import { MenuComponent } from './menu.component';
 import { HeaderComponent } from './header.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './signup/signup.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
@@ -23,7 +24,8 @@ import { SharedService } from "./shared.service";
     MovieComponent,
     HeaderComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

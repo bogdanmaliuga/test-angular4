@@ -1,24 +1,26 @@
 <div class="login-form">
+  <h3>Login</h3>
+  <div class="fade-line"></div>
+  <form #myForm="ngForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
 
+      <input type="email" [(ngModel)]="email" email name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Email" required>
 
-<h3>Login</h3>
-<div class="fade-line"></div>
-<form>
-  <div class="form-group">
+    </div>
+    <div class="form-group">
 
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-
-  </div>
-  <div class="form-group">
-
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <label class="form-check-label">
+      <input type="password" [(ngModel)]="password" password name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
       <input type="checkbox" class="form-check-input">
       Remember Me
     </label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    </div>
+    <button [disabled]="!myForm.form.valid" type="submit" class="btn btn-primary login">Login</button>
+  </form>
+  <small>Forgot Password</small>
+  <div class="fade-line"></div>
+  <a class="signup" [routerLink]="['/signup']">SIGN UP</a>
 </div>

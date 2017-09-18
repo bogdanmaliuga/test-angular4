@@ -54,4 +54,42 @@
     }
   }
 }
-
+.personal-info-form.signup-form{
+  max-width: 354px;
+  form{
+    .form-group{
+      margin:17px 37px;
+    }
+    
+  }
+  .user-name{
+    color: #9b9b9b;
+    font-size: 13px;
+    line-height: 27px;
+    letter-spacing: -0.16px;
+    span{
+      color: #9b9b9b;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 27px;
+      letter-spacing: -0.16px;
+      padding-left: 10px;
+    }
+  }
+}
+.set-password-form.signup-form{
+  .user-name{
+    color: #9b9b9b;
+    font-size: 13px;
+    line-height: 27px;
+    letter-spacing: -0.16px;
+    span{
+      color: #9b9b9b;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 27px;
+      letter-spacing: -0.16px;
+      padding-left: 10px;
+    }
+  }
+}

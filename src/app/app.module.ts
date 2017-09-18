@@ -14,6 +14,8 @@ import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
 import { CONST_ROUTING } from './app.routing';
 import { SharedService } from "./shared.service";
+import { LoaderService } from './loader.service';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { SharedService } from "./shared.service";
     HttpModule,
     CONST_ROUTING
   ],
-  providers: [SharedService],
+  providers: [SharedService,LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
